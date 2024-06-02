@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Image2 from '../Styles/Images/logo.png';
+import Image2 from '../styles/Images/logo.png';
 
 import {
   MDBContainer,
@@ -12,7 +12,7 @@ import {
   MDBCollapse
 } from 'mdb-react-ui-kit';
 
-export default function App() {
+export default function NavBar({ isCartVisible }) {
   const [openNav, setOpenNav] = useState(false);
 
   return (
@@ -29,21 +29,21 @@ export default function App() {
         <MDBCollapse navbar open={openNav}>
           <MDBNavbarNav>
             <MDBNavbarItem>
-              <MDBNavbarLink active aria-current='page' href='#' style={{ color: 'white' }}>
+              <MDBNavbarLink active aria-current='page' href='/' style={{ color: 'white' }}>
                 Home
               </MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
-              <MDBNavbarLink href='#' style={{ color: 'white' }}>Features</MDBNavbarLink>
+              <MDBNavbarLink href='./Features' style={{ color: 'white' }}>Features</MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
-              <MDBNavbarLink href='#' style={{ color: 'white'}}>Pricing</MDBNavbarLink>
+              <MDBNavbarLink href='/Pricing' style={{ color: 'white'}}>Pricing</MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
-              <MDBNavbarLink href='#' style={{ color: 'white' }}>About</MDBNavbarLink>
+              <MDBNavbarLink href='/About' style={{ color: 'white' }}>About</MDBNavbarLink>
             </MDBNavbarItem>     
             <MDBNavbarItem>
-              <MDBNavbarLink href='#' style={{ color: 'white' }}>Register</MDBNavbarLink>
+              <MDBNavbarLink href='/Register' style={{ color: 'white' }}>Register</MDBNavbarLink>
             </MDBNavbarItem>                            
           </MDBNavbarNav>                
         </MDBCollapse>
@@ -59,6 +59,11 @@ export default function App() {
       <span class="input-group-text border-0" id="search-addon" style={{ color: 'white' }}>
         <i class="fas fa-search"></i>
       </span>
+
+      {isCartVisible && 
+        <span class="input-group-text border-0" id="search-addon" style={{ color: 'white' }}>
+        <i class="fas fa-search"></i>
+      </span>}
     </form>    
       </MDBContainer>
     </MDBNavbar>

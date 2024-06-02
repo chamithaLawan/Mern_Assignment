@@ -4,7 +4,7 @@ function Bannser() {
   return (
     <div>
       <div className='text-center bg-image' style={{ height: '350px' }}>
-        <img src={require('../Styles/Images/Banner.jpg')} alt="Banner" style={{ height: '350px', width: '100%' }} />
+        <img src={require('../styles/Images/Banner.jpg')} alt="Banner" style={{ height: '350px', width: '100%' }} />
         <div className='mask' style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)' }}>
           <div className='d-flex justify-content-center align-items-center h-100'>
             <div className='text-white'>
